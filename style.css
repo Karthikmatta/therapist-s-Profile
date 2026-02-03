@@ -1,0 +1,122 @@
+:root {
+  --bg: #FAF7F2;
+  --section-bg: #F2EEE6;
+  --text: #1F2A24;
+  --heading: #2F4A3A;
+  --accent: #A9B8A7;
+  --btn-bg: #2F4A3A;
+  --btn-text: #FFFFFF;
+  --border: #DDD6CC;
+}
+
+/* Apply theme colors */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+section, .section, .sqs-block {
+  background-color: var(--section-bg);
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading);
+}
+a, a:link, a:visited {
+  color: var(--accent);
+}
+.sqs-block-button-element,
+button,
+.button,
+.btn {
+  background-color: var(--btn-bg) !important;
+  color: var(--btn-text) !important;
+  border: 1px solid var(--border) !important;
+}
+hr, .divider {
+  border-color: var(--border);
+  background-color: var(--border);
+}
+.sqs-block[data-definition-name="website.components.imageFluid"] {
+  /* Reusing  "design-layout-fluid" class to match legacy implementation */
+}
+.sqs-block[data-definition-name="website.components.imageFluid"] .sqs-block-content,
+.sqs-block[data-definition-name="website.components.imageFluid"] .image-block-outer-wrapper,
+.sqs-block[data-definition-name="website.components.imageFluid"] .sqs-image {
+  width: 100%;
+  height: 100%;
+}
+.sqs-block[data-definition-name="website.components.imageFluid"] .sqs-image-content {
+  position: relative;
+  width: var(--image-component-container-width, 100%);
+  height: var(--image-component-container-height, 100%);
+}
+.sqs-block[data-definition-name="website.components.imageFluid"] .design-layout-fluid img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.sqs-block[data-definition-name="website.components.imageFluid"] .design-layout-fluid .sqs-image {
+  display: flex;
+}
+.sqs-block[data-definition-name="website.components.imageFluid"] .design-layout-fluid.image-position-left .sqs-image {
+  justify-content: flex-start;
+}
+.sqs-block[data-definition-name="website.components.imageFluid"] .design-layout-fluid.image-position-center .sqs-image {
+  justify-content: center;
+}
+.sqs-block[data-definition-name="website.components.imageFluid"] .design-layout-fluid.image-position-right .sqs-image {
+  justify-content: flex-end;
+}
+.sqs-block[data-definition-name="website.components.imageFluid"] .fluidImageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: var(--image-component-overlay-blend-mode);
+  opacity: var(--image-component-overlay-opacity);
+}
+.sqs-block[data-definition-name="website.components.imageFluid"] .imageEffectContainer {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  pointer-events: none;
+}
+.sqs-block[data-definition-name="website.components.imageFluid"] .sqs-block-image-button {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0;
+  background: none;
+}
+.sqs-block[data-definition-name="website.components.button"] {
+  /* Button Block Base Style
+=================================================*/
+}
+.sqs-block[data-definition-name="website.components.button"] .sqs-block-content {
+  flex: var(--sqs-block-content-flex, 0);
+}
+.sqs-block[data-definition-name="website.components.button"] .sqs-stretched {
+  flex: 1;
+  height: 100%;
+}
+.sqs-block[data-definition-name="website.components.button"] .sqs-stretched .sqs-block-button-element {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: center;
+  flex: 1;
+}
+.sqs-block[data-definition-name="website.components.button"] .sqs-block-button-container--left {
+  text-align: left;
+}
+.sqs-block[data-definition-name="website.components.button"] .sqs-block-button-container--center {
+  text-align: center;
+}
+.sqs-block[data-definition-name="website.components.button"] .sqs-block-button-container--right {
+  text-align: right;
+}
+.sqs-block[data-definition-name="website.components.button"] [data-has-block-animations] .sqs-block-button-element {
+  transition: none !important;
+  opacity: 1 !important;
+}
